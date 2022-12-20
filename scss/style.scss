@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.field,
+.choice {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.choice {
+  transition: ease-in-out;
+  transition-duration: 0.2s;
+  background-color: gray;
+}
+
+#active {
+  .choice.red:hover {
+    background-color: rgb(220, 53, 69);
+  }
+  
+  .choice:not(.red):hover {
+    background-color: rgb(255, 193, 7);
+  }
+}
+
+.grid-template-columns-7 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  gap: 0.25rem;
+}
+
+@media (min-width: 576px) {
+    .field,
+    .choice {
+        width: 2.5rem;
+        height: 2.5rem;
+    } 
+}
+
+@media (min-width: 992px) {
+    .field,
+    .choice {
+        width: 4rem;
+        height: 4rem;
+    } 
+}
